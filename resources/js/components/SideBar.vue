@@ -45,11 +45,6 @@ export default {
           name: this.$t("Dyskusje"),
           route: "discussions"
         },
-        {
-          icon: "fas fa-poll",
-          name: this.$t("Sondaże"),
-          route: "polls"
-        }
       ];
     },
     visibleSideBar(){

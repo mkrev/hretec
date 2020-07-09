@@ -45,6 +45,7 @@
 
 <script>
 import Form from "vform";
+import axios from "axios";
 
 export default {
   middleware: "auth",
@@ -73,8 +74,8 @@ export default {
   methods: {
     async create() {
       const url = this.isUpdate()
-        ? `/api/update-or-create/article/${this.$route.params.id}`
-        : "/api/update-or-create/article";
+        ? `/api/update-or-create/discussion/${this.$route.params.id}`
+        : "/api/update-or-create/discussion";
       const { data } = await this.form.post(url);
     },
 

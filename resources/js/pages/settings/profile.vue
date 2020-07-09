@@ -44,59 +44,6 @@
       </div>
 
       <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('Światopogląd') }}</label>
-        <div class="col-md-6">
-          <select
-            v-model="form.ideology_id"
-            :class="{ 'is-invalid': form.errors.has('ideology_id') }"
-            class="form-control"
-            name="ideology_id"
-          >
-            <option></option>
-            <option
-              v-for="(ideology,key) in politicalViews.ideologies"
-              :key="key"
-              :value="ideology.id"
-            >{{ ideology.name }}</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('System ekonomiczny') }}</label>
-        <div class="col-md-6">
-          <select
-            v-model="form.economy_id"
-            :class="{ 'is-invalid': form.errors.has('ideology_id') }"
-            class="form-control"
-            name="economy_id"
-          >
-            <option></option>
-            <option
-              v-for="(economy,key) in politicalViews.economies"
-              :key="key"
-              :value="economy.id"
-            >{{ economy.name }}</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('Partia polityczna') }}</label>
-        <div class="col-md-6">
-          <select
-            v-model="form.party_id"
-            :class="{ 'is-invalid': form.errors.has('ideology_id') }"
-            class="form-control"
-            name="party_id"
-          >
-            <option></option>
-            <option v-for="(party,key) in politicalViews.parties" :key="key" :value="party.id">{{ party.name }}</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group row">
         <label class="col-md-3 col-form-label text-md-right">{{ $t('Zdjęcie') }}</label>
         <div class="col-md-6">
           <div class="input-group">
@@ -136,7 +83,7 @@ import { objectToFormData } from 'object-to-formdata';
 import { mapGetters } from "vuex";
 
 export default {
-  middleware: "political_views",
+ 
   scrollToTop: false,
 
   metaInfo() {
@@ -159,7 +106,6 @@ export default {
   computed: mapGetters({
     user: "auth/user",
     locale: "lang/locale",
-    politicalViews: "basic_data/politicalViews"
   }),
 
   created() {

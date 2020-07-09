@@ -72,6 +72,7 @@
 import Form from "vform";
 import { objectToFormData } from "object-to-formdata";
 import { mapGetters } from "vuex";
+import axios from "axios";
 
 export default {
   middleware: "auth",
@@ -104,7 +105,10 @@ export default {
 
   methods: {
     async create() {
-      const { data } = await this.form.post("/api/create/video", {
+      const url = this.isUpdate()
+        ? `/api/update-or-create/video/${this.$route.params.id}`
+        : "/api/update-or-create/video";
+      const { data } = await this.form.post(url, {
         transformRequest: [
           function(data, headers) {
             return objectToFormData(data);

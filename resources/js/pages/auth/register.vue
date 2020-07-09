@@ -94,69 +94,10 @@
           </div>
 
           <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('Światopogląd') }}</label>
-            <div class="col-md-6">
-              <select
-                v-model="form.ideology_id"
-                :class="{ 'is-invalid': form.errors.has('ideology_id') }"
-                class="form-control"
-                name="ideology_id"
-              >
-                <option></option>
-                <option
-                  v-for="(ideology,key) in politicalViews.ideologies"
-                  :key="key"
-                  :value="ideology.id"
-                >{{ ideology.name }}</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('System ekonomiczny') }}</label>
-            <div class="col-md-6">
-              <select
-                v-model="form.economy_id"
-                :class="{ 'is-invalid': form.errors.has('ideology_id') }"
-                class="form-control"
-                name="economy_id"
-              >
-                <option></option>
-                <option
-                  v-for="(economy,key) in politicalViews.economies"
-                  :key="key"
-                  :value="economy.id"
-                >{{ economy.name }}</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('Partia polityczna') }}</label>
-            <div class="col-md-6">
-              <select
-                v-model="form.party_id"
-                :class="{ 'is-invalid': form.errors.has('ideology_id') }"
-                class="form-control"
-                name="party_id"
-              >
-                <option></option>
-                <option
-                  v-for="(party,key) in politicalViews.parties"
-                  :key="key"
-                  :value="party.id"
-                >{{ party.name }}</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group row">
             <div class="col-md-7 offset-md-3 d-flex">
               <!-- Submit Button -->
               <v-button class="btn-ournews" :loading="form.busy">{{ $t('register') }}</v-button>
 
-              <!-- GitHub Register Button -->
-              <login-with-github />
             </div>
           </div>
         </form>
@@ -180,12 +121,7 @@ import {
 } from "vuelidate/lib/validators";
 
 export default {
-  middleware: ["guest", "political_views"],
-  //middleware: ["guest"],
-
-  components: {
-    LoginWithGithub
-  },
+  middleware: "guest",
 
   metaInfo() {
     return { title: this.$t("register") };
@@ -197,19 +133,12 @@ export default {
       email: "",
       password: "",
       password_confirmation: "",
-      ideology_id: "",
-      economy_id: "",
-      party_id: ""
     }),
     mustVerifyEmail: false,
     ideologies: "",
     economies: "",
     parties: "",
     submitted: false
-  }),
-
-  computed: mapGetters({
-    politicalViews: "basic_data/politicalViews"
   }),
 
   validations: {

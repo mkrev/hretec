@@ -1,11 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Models\{
-    Economy,
-    Ideology,
-    Party,
-};
 
 
 /*
@@ -47,10 +42,3 @@ Route::group(['middleware' => 'guest:api'], function () {
 
 require 'modules/public/index.php';
 
-Route::get('political-views', function (Request $request) {
-    $economies = Economy::all();
-    $ideologies = Ideology::all();
-    $parties = Party::all();
-
-    return response()->json(compact('economies', 'ideologies', 'parties'));
-});

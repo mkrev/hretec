@@ -15,9 +15,6 @@ class RegisterTest extends TestCase
             'email' => 'test@test.app',
             'password' => 'secret',
             'password_confirmation' => 'secret',
-            'ideology_id' => 1,
-            'economy_id' => 1,
-            'party_id' => 1,
         ])
         ->assertSuccessful()
         ->assertJsonStructure(['id', 'name', 'email']);

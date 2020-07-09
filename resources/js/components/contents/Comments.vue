@@ -133,7 +133,7 @@ export default {
     },
 
     async addLike(comment, isLike) {
-      let { data } = await axios.post(`/api/comment/{${comment.id}}/add-like`, {
+      let { data } = await axios.post(`/api/comment/${comment.id}/add-like`, {
         is_like: isLike
       });
       this.user.likes = data.likes;

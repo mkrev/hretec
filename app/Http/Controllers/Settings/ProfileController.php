@@ -29,6 +29,6 @@ class ProfileController extends Controller
             );
         }
 
-        return tap($user)->update(array_filter($request->only('email', 'ideology_id', 'economy_id', 'party_id')));
+        return tap($user)->update($request->only('email'));
     }
 }

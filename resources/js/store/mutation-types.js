@@ -8,7 +8,3 @@ export const UPDATE_USER = 'UPDATE_USER'
 
 // lang.js
 export const SET_LOCALE = 'SET_LOCALE'
-
-// political_views.js
-export const FETCH_POLITICAL_VIEWS_SUCCESS = 'FETCH_POLITICAL_VIEWS_SUCCESS'
-export const FETCH_POLITICAL_VIEWS_FAILURE = 'FETCH_POLITICAL_VIEWS_FAILURE'

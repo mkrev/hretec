@@ -46,11 +46,6 @@ export default {
           name: this.$t("Dyskusje"),
           route: "create.discussion"
         },
-        {
-          icon: "user",
-          name: this.$t("Sondaż"),
-          route: "create.poll"
-        }
       ];
     }
   }

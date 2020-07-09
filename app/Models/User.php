@@ -6,24 +6,17 @@ use App\Notifications\VerifyEmail;
 use App\Notifications\ResetPassword;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Models\{
-    Economy,
-    Party,
-    Ideology,
-    Role
-};
+use App\Models\{Role};
 use App\Models\Contents\{
     Article,
     Discussion,
     Video,
-    Poll
 };
 use App\Models\Contents\Parts\Like;
 use Storage;
 
-class User extends Authenticatable implements JWTSubject/*, MustVerifyEmail*/
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
@@ -36,9 +29,6 @@ class User extends Authenticatable implements JWTSubject/*, MustVerifyEmail*/
         'name',
         'email',
         'password',
-        'ideology_id',
-        'economy_id',
-        'party_id',
     ];
 
     /**
@@ -69,27 +59,9 @@ class User extends Authenticatable implements JWTSubject/*, MustVerifyEmail*/
     ];
 
     protected $with = [
-        'ideology',
-        'economy',
-        'party',
         'role',
         'likes',
     ];
-
-    public function economy()
-    {
-        return $this->belongsTo(Economy::class);
-    }
-
-    public function ideology()
-    {
-        return $this->belongsTo(Ideology::class);
-    }
-
-    public function party()
-    {
-        return $this->belongsTo(Party::class);
-    }
 
     public function role()
     {
@@ -121,10 +93,6 @@ class User extends Authenticatable implements JWTSubject/*, MustVerifyEmail*/
         return $this->hasMany(Discussion::class);
     }
 
-    public function polls()
-    {
-        return $this->hasMany(Poll::class);
-    }
 
 
     /**

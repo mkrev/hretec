@@ -29,7 +29,6 @@ export default [
     { path: 'article', name: 'create.article', component: page('contents/create/article.vue') },
     { path: 'video', name: 'create.video', component: page('contents/create/video.vue') },
     { path: 'discussion', name: 'create.discussion', component: page('contents/create/discussion.vue') },
-    { path: 'poll', name: 'create.poll', component: page('contents/create/poll.vue') },
   ] 
 },
 
@@ -40,7 +39,6 @@ children: [
   { path: 'article/:id', name: 'edit.article', component: page('contents/create/article.vue') },
   { path: 'video/:id', name: 'edit.video', component: page('contents/create/video.vue') },
   { path: 'discussion/:id', name: 'edit.discussion', component: page('contents/create/discussion.vue') },
-  { path: 'poll/:id', name: 'edit.poll', component: page('contents/create/poll.vue') },
 ] 
 },
 
@@ -51,19 +49,16 @@ children: [
   { path: 'article', name: 'list.article', component: page('contents/list/article.vue') },
   { path: 'video', name: 'list.video', component: page('contents/list/video.vue') },
   { path: 'discussion', name: 'list.discussion', component: page('contents/list/discussion.vue') },
-  { path: 'poll', name: 'list.poll', component: page('contents/list/poll.vue') },
 ] 
 },
 
   { path: '/articles', name: 'articles', component: page('contents/articles.vue') },
   { path: '/videos', name: 'videos', component: page('contents/videos.vue') },
   { path: '/discussions', name: 'discussions', component: page('contents/discussions.vue') },
-  { path: '/polls', name: 'polls', component: page('contents/polls.vue') },
 
   { path: '/article/:id', name: 'article', component: page('contents/detail/article.vue') },
   { path: '/video/:id', name: 'video', component: page('contents/detail/video.vue') },
   { path: '/discussion/:id', name: 'discussion', component: page('contents/detail/discussion.vue') },
-  { path: '/poll/:id', name: 'poll', component: page('contents/detail/poll.vue') },
   
 
   { path: '*', component: page('errors/404.vue') }
