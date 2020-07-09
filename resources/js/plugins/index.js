@@ -1,0 +1,5 @@
+import './axios'
+import './fontawesome'
+import './vuelidate'
+import './vuetables2'
+import 'bootstrap'

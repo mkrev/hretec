@@ -1,0 +1,31 @@
+@import 'abstracts/variables';
+
+@import '~bootstrap/scss/bootstrap';
+@import '~sweetalert2/src/sweetalert2';
+//@import "~font-awesome/scss/font-awesome";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+
+
+@import 'abstracts/transitions';
+
+@import 'base/typography';
+@import 'base/main';
+
+@import 'layouts/lists';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/forms';
+@import 'layouts/sidebar';
+@import 'layouts/userbar';
+@import 'layouts/navigation';
+@import 'layouts/comments';
+@import 'layouts/content_detail';
+
+@import 'components/card';
+@import 'components/buttons';
+
+
+

@@ -1,0 +1,11 @@
+.content-detail{
+    .action{
+        button{
+            i{
+                &.active{
+                    color: $active;
+                }
+            }
+        }
+    }
+}

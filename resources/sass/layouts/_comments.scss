@@ -1,0 +1,27 @@
+.comment-tab{
+    .comments{
+        ul{
+            li{
+                color: $black;
+                article{
+                    img{
+                        width: 5rem;
+                        height: 5rem;
+                    }
+                    .action{
+                        button{
+                            color: $dark-black;
+                            i{
+                                &.active{
+                                    color: $active;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+       
+    }
+}

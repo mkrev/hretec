@@ -1,0 +1,16 @@
+body {
+  background-color: $body-bg !important;
+  color: $body-color;
+}
+
+a {
+  transition: color 0.3s;
+  text-decoration: none !important;
+  color: $link !important;
+  &:active,
+  &:focus,
+  &:hover {
+    transition: color 0.0s;
+    color: $link-hover!important;
+  }
+}

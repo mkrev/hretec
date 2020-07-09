@@ -1,0 +1,20 @@
+body{
+  margin-top: $header-height;
+}
+.content{
+  /*height: calc(100vh - #{$header-height});*/
+  /* align-items: center;*/
+  /*-webkit-box-pack: center !important;*/
+  /*justify-content: center !important;*/
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+main{
+  width: 100%;
+}
+
+
+

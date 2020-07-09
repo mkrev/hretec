@@ -1,0 +1,14 @@
+header{
+  height: $header_height;
+}
+
+.menu{
+  background-color: $maroon;
+  position: fixed;
+  top : 0;
+  color: #fff;
+  width: 100%;
+  flex-direction: column;
+  z-index: 1000;
+}
+

@@ -1,0 +1,79 @@
+
+// Body
+$body-bg: #1d1d1d;
+$body-color: #fff;
+$active : #FF6347;
+
+
+//Container
+/*$container-max-widths: (
+    xs: 540px,
+    sm: 700px,
+    md: 960px,
+    lg: 1140px,
+    xl: 1300px,
+    g: 1560px,
+    xg: 1920px
+) !default;
+*/
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1580px
+) !default;
+
+//Header
+$header-height: 56px;
+
+//SideBar
+$sidebar-width: 260px;
+
+//Href
+$link: #b3002d;
+$link-hover: #ff1a53 ;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Cards
+$card-spacer-x: 0.9375rem;
+$card-spacer-y: 0.625rem;
+$card-cap-bg: #fbfbfb;
+$card-border-color: #e8eced;
+
+// Borders
+$border-radius: .125rem;
+$border-radius-lg: .2rem;
+$border-radius-sm: .15rem;
+
+// Nav Pills
+$nav-pills-border-radius: 0;
+
+// Colors
+$dark-black: #000000;
+$black: #26211b;
+$light-black: #282828;
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$maroon: #800020;
+$white: #fff;
+
+$custom-file-text: (
+en: "Browse",
+pl: "Szukaj",
+);
+
+
+
